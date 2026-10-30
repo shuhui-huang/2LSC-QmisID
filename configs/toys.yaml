@@ -1,0 +1,27 @@
+# Toy ntuples with known rates: `qmisid make-toys toys` then e.g.
+#   qmisid truth -c configs/toys.yaml -s Zjets -s ttbar
+#   qmisid likelihood -c configs/toys.yaml -s Data
+#   qmisid closure -c configs/toys.yaml -s Data --rates results_toys/Likelihood_Data/Data_Default_nJets_le1.root
+#   qmisid syst -c configs/toys.yaml
+base: default.yaml
+
+output_dir: results_toys
+
+samples:
+  Data: {path: toys/, filelist: toys/Data.list, is_data: true}
+  Zjets: {path: toys/, filelist: toys/ZjetsMC.list, weight: weight}
+  ttbar: {path: toys/, filelist: toys/ttbarMC.list, weight: weight}
+
+truth:
+  output_dir: results_toys/Truth_MC_Weighted_Full
+likelihood:
+  output_dir_data: results_toys/Likelihood_Data
+  output_dir_mc: results_toys/Likelihood_MC
+  reference:
+    file: results_toys/Truth_MC_Weighted_Full/Zjets_Default_nJets_le1.root
+    hist: Zjets_Default_nJets_le1_all_num
+closure:
+  output_dir: results_toys/Closure
+  lumi_label: "Toy ntuples"
+systematics:
+  output_dir: results_toys/Systematics

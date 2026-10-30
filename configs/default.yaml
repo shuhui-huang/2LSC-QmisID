@@ -1,0 +1,160 @@
+# Recommended configuration of the Python QmisID framework (v5 Run-3 ntuples).
+#
+# Same physics as the v5New ROOT macros, with the issues listed in README.md
+# ("Differences with respect to the ROOT macros") fixed. To reproduce the
+# macros exactly use configs/legacy_v5New.yaml.
+#
+# All selections are ROOT/TTreeFormula-style strings evaluated column-wise.
+
+output_dir: results_py
+tag: _Default_nJets_le1          # output name = <sample><tag>, e.g. Data_Default_nJets_le1
+tree: qmisid_cr
+step_size: 50 MB                 # uproot chunk size (smaller chunks are faster: less memory traffic)
+
+binning:
+  eta: [0, 1.37, 1.52, 2.0, 2.6]
+  pt: [20, 50, 100, 200, 2600]
+
+leptons:                         # [leading, sub-leading]
+  eta: ["fabs(l1_eta)", "fabs(l2_eta)"]
+  pt: ["l1_pt*0.001", "l2_pt*0.001"]
+
+samples:
+  Data:
+    path: /eos/user/s/shuhui/public/Run3_HHML/v5_ntuples_wIFF/
+    filelist: Inputlists/Data.list
+    is_data: true
+  Zjets:
+    path: /eos/user/s/shuhui/public/Run3_HHML/v5_ntuples_wIFF/
+    filelist: Inputlists/ZjetsMC.list
+    weight: weight
+  ttbar:
+    path: /eos/user/s/shuhui/public/Run3_HHML/v5_ntuples_wIFF/
+    filelist: Inputlists/ttbarMC.list
+    weight: weight
+
+# --------------------------------------------------------------------------
+# 1) truth-matched rates in MC
+# --------------------------------------------------------------------------
+truth:
+  output_dir: results_py/Truth_MC_Weighted_Full
+  use_weight: true
+  baseline: >-
+    fabs(l1_eta)<2.47 && fabs(l2_eta)<2.47
+    && !(fabs(l1_eta)>1.37 && fabs(l1_eta)<1.52) && !(fabs(l2_eta)>1.37 && fabs(l2_eta)<1.52)
+  extra_cut: "l1_IDTight==1 && l2_IDTight==1"
+  wrong_track: ["l1_IFF==3", "l2_IFF==3"]          # IFF FlipQ
+  photon_conversion: ["0", "0"]                   # not separated in v5 (dummy, as in the macro)
+  real: ["l1_IFF==2", "l2_IFF==2"]                # IFF PromptEle
+  same_charge: "same_charge==1"
+  split_charge: false                             # e-/e+ separated rates (needs the selections below)
+  # electron_selection: ["...", "..."]
+  # positron_selection: ["...", "..."]
+
+# --------------------------------------------------------------------------
+# 2) likelihood rates (data and MC)
+# --------------------------------------------------------------------------
+likelihood:
+  output_dir_data: results_py/Likelihood_Data
+  output_dir_mc: results_py/Likelihood_MC
+  selection: >-
+    l1_IDTight!=0 && l2_IDTight!=0 && fabs(l1_eta)<2.47 && fabs(l2_eta)<2.47
+    && !(fabs(l1_eta)>1.37 && fabs(l1_eta)<1.52) && !(fabs(l2_eta)>1.37 && fabs(l2_eta)<1.52)
+  same_sign: same_charge
+  opposite_sign: opposite_charge
+  mll: m_l1l2*0.001
+  mll_window: [61, 81, 101, 121]   # low, low_Z, up_Z, up: Z peak (81,101), sidebands [61,81]+[101,121]
+  subtract_background: true
+  sideband_scale: auto             # peak width / sideband width (= 0.5 here)
+  model: approx                    # approx: N_SS = N (e1+e2) (macro) | exact: N (e1+e2-2 e1 e2)
+  bin_convention: right_closed     # (lo, hi] as in the macro; pT above the last edge -> last bin
+  skip_eta_bins: [1]               # crack bin, not fitted
+  n_bootstrap: 0                   # >0: Poisson-bootstrap replicas for a stat cross-check
+  reference:                       # starting values (truth-matched MC rates)
+    file: results_py/Truth_MC_Weighted_Full/Zjets_Default_nJets_le1.root
+    hist: Zjets_Default_nJets_le1_all_num
+  minuit:
+    errordef: 0.5                  # -ln L  (the macro used 1 -> errors x sqrt(2))
+    strategy: 1
+    step: 1.0e-10
+    limits: [1.0e-10, 0.99]
+    hesse: true
+    ncall: 10000000
+    tol: 0.1
+
+# --------------------------------------------------------------------------
+# 3) closure test / application of the rates
+# --------------------------------------------------------------------------
+closure:
+  output_dir: results_py/Closure
+  # same object selection as used to measure the rates
+  selection: >-
+    l1_IDTight!=0 && l2_IDTight!=0 && fabs(l1_eta)<2.47 && fabs(l2_eta)<2.47
+    && !(fabs(l1_eta)>1.37 && fabs(l1_eta)<1.52) && !(fabs(l2_eta)>1.37 && fabs(l2_eta)<1.52)
+  same_sign: same_charge
+  opposite_sign: opposite_charge
+  mll: m_l1l2*0.001
+  mll_window: [81, 101]            # null = no Mll requirement
+  sidebands: [61, 121]             # used if subtract_background
+  subtract_background: true
+  merge_overflow: all              # all | nominal (macro: SS and OS only) | none
+  clip_variations: true
+  lumi_label: "$\\sqrt{s}$ = 13.6 TeV"
+  per_sample:
+    ttbar: {mll_window: null, subtract_background: false}
+  variables:
+    - {name: PtLep1, expr: "l1_pt*0.001", bins: [20, 50, 100, 200, 2600], xtitle: "Leading lepton $p_T$ [GeV]"}
+    - {name: PtLep2, expr: "l2_pt*0.001", bins: [20, 50, 100, 200, 2600], xtitle: "Sub-leading lepton $p_T$ [GeV]"}
+    - {name: Mll, expr: "m_l1l2*0.001", nbins: 40, low: 71, high: 111, xtitle: "$M_{ee}$ [GeV]"}
+    - {name: EtaLep1, expr: "fabs(l1_eta)", bins: [0, 1.37, 1.52, 2.0, 2.5], xtitle: "Leading lepton $|\\eta|$"}
+    - {name: EtaLep2, expr: "fabs(l2_eta)", bins: [0, 1.37, 1.52, 2.0, 2.5], xtitle: "Sub-leading lepton $|\\eta|$"}
+    - {name: PtLep1new, expr: "l1_pt*0.001", nbins: 20, low: 0, high: 500, xtitle: "Leading lepton $p_T$ [GeV]"}
+    - {name: PtLep2new, expr: "l2_pt*0.001", nbins: 20, low: 0, high: 500, xtitle: "Sub-leading lepton $p_T$ [GeV]"}
+    - {name: EtaLep1new, expr: "l1_eta", nbins: 18, low: -3, high: 3, xtitle: "Leading lepton $\\eta$"}
+    - {name: EtaLep2new, expr: "l2_eta", nbins: 18, low: -3, high: 3, xtitle: "Sub-leading lepton $\\eta$"}
+
+# --------------------------------------------------------------------------
+# 4) systematic uncertainties on the data rates (see docs/systematics.md)
+# --------------------------------------------------------------------------
+systematics:
+  output_dir: results_py/Systematics
+  sample: Data
+  stat:
+    method: hesse                  # hesse | bootstrap
+    n_bootstrap: 0                 # e.g. 100 for the bootstrap cross-check
+  plots: true
+  sources:
+    mll_window:                    # Z-peak and sideband definition
+      type: refit
+      symmetrize: envelope
+      variations:
+        wide: {mll_window: [56, 76, 106, 126]}
+        narrow: {mll_window: [66, 86, 96, 116]}
+    bkg_norm:                      # normalisation of the sideband subtraction (+-50%)
+      type: refit
+      symmetrize: envelope
+      variations:
+        up: {sideband_scale: 0.75}
+        down: {sideband_scale: 0.25}
+    lh_model:                      # (e1+e2) approximation vs exact pair probability
+      type: refit
+      variations:
+        exact: {model: exact}
+    # For the sources below, a measured relative difference r with stat. uncertainty s
+    # becomes an uncertainty via `mode`: abs |r| | beyond_stat sqrt(max(r^2-s^2,0)) | max_stat max(|r|,s)
+    non_closure:                   # SS observed vs OS-weighted per rate bin, fit region (data)
+      type: closure
+      mode: beyond_stat
+    method_bias:                   # likelihood vs truth-matched rates in Z+jets MC
+      type: mc_method
+      mc_sample: Zjets
+      truth_extra_cut: "m_l1l2*0.001>61 && m_l1l2*0.001<121"
+      mode: beyond_stat            # MC stat. of both methods is not counted twice
+      cap: 1.0
+    process_dependence:            # Z->ee vs ttbar truth rates (extrapolation to the SR)
+      type: process
+      reference_sample: Zjets
+      target_sample: ttbar
+      granularity: inclusive       # bin | pt | eta | inclusive: ttbar flips / (ttbar electrons x Z rates)
+      mode: abs
+      cap: 1.0

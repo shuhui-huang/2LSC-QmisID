@@ -1,0 +1,49 @@
+# Reproduces the v5New ROOT macros as closely as possible, including their
+# known issues (see README.md), so that Python and ROOT outputs can be
+# compared bin by bin:
+#   ChargeFlipTruthv5New.C("ttbar"/"Zjets","_Default",true,false,"_nJets_le1",
+#                          "l1_IDTight==1 && l2_IDTight==1","all",false)
+#   Likelihoodv5New.C("Data"/"Zjets")
+#   ClosureTestv5New.C("Data","<rates dir>","Data","all","<out>",false,false,"")
+base: default.yaml
+
+output_dir: results_legacy
+
+truth:
+  output_dir: results_legacy/Truth_MCRun3_Weighted_Full
+  baseline: "(l1_eta<1.37 || l1_eta >1.52) && (l2_eta<1.37 || l2_eta >1.52)"   # signed eta (macro)
+  binning:
+    pt: [20, 50, 100, 200, 2500]                                                # macro truth binning
+
+likelihood:
+  output_dir_data: results_legacy/Likelihood_Data_v5
+  output_dir_mc: results_legacy/Likelihood_MC_v5
+  selection: >-
+    l1_IDTight!=0 && l2_IDTight!=0 && fabs(l1_eta)<2.47 && fabs(l2_eta)<2.47
+    && !(fabs(l1_eta)>1.37 && fabs(l1_eta)<1.52) && !(fabs(l2_eta)>1.37 && fabs(l2_eta)<1.52)
+  sideband_scale: 0.5
+  float32_kinematics: true          # pT, |eta|, Mll rounded to float as in the macro
+  reference:
+    file: results_legacy/Truth_MCRun3_Weighted_Full/ttbar_Default_nJets_le1.root
+    hist: ttbar_Default_nJets_le1_all_num
+  minuit:
+    errordef: 1.0
+    hesse: false
+
+closure:
+  output_dir: results_legacy/ValidationPlots
+  selection: "1"                    # the macro applies no ID / eta / crack selection
+  sidebands: null
+  subtract_background: false
+  merge_overflow: nominal           # overflow merged into SS and OS but not OSUp/OSDown
+  float32_kinematics: true
+  variables:
+    - {name: PtLep1, expr: "l1_pt*0.001", bins: [20, 50, 100, 200, 2600]}
+    - {name: PtLep2, expr: "l2_pt*0.001", bins: [20, 50, 100, 200, 2600]}
+    - {name: Mll, expr: "m_l1l2*0.001", nbins: 40, low: 71, high: 111}
+    - {name: EtaLep1, expr: "fabs(l1_eta)", bins: [0, 1.37, 1.52, 2.0, 2.5]}
+    - {name: EtaLep2, expr: "fabs(l2_eta)", bins: [0, 1.37, 1.52, 2.0, 2.5]}
+    - {name: PtLep1new, expr: "l1_pt*0.001", nbins: 20, low: 0, high: 500}
+    - {name: PtLep2pnew, expr: "l2_pt*0.001", nbins: 20, low: 0, high: 500}
+    - {name: EtaLep1new, expr: "fabs(l1_eta)", nbins: 18, low: -3, high: 3}   # macro fills |eta| here
+    - {name: EtaLep2new, expr: "fabs(l2_eta)", nbins: 18, low: -3, high: 3}

@@ -1,0 +1,21 @@
+# Legacy (macro-identical) settings on the toy ntuples, for the ROOT <-> Python
+# cross-check (validation/run_root_crosscheck.sh).
+base: ../configs/legacy_v5New.yaml
+
+output_dir: results_crosscheck/python
+
+samples:
+  Data: {path: toys/, filelist: toys/Data.list, is_data: true}
+  Zjets: {path: toys/, filelist: toys/ZjetsMC.list, weight: weight}
+  ttbar: {path: toys/, filelist: toys/ttbarMC.list, weight: weight}
+
+truth:
+  output_dir: results_crosscheck/python/Truth_MCRun3_Weighted_Full
+likelihood:
+  output_dir_data: results_crosscheck/python/results_Run3/Likelihood_Data_v5/Data
+  output_dir_mc: results_crosscheck/python/results_Run3/Likelihood_MC_v5
+  reference:
+    file: results_crosscheck/python/Truth_MCRun3_Weighted_Full/ttbar_Default_nJets_le1.root
+    hist: ttbar_Default_nJets_le1_all_num
+closure:
+  output_dir: results_crosscheck/python/ValidationPlots
