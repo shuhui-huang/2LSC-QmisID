@@ -1,0 +1,52 @@
+
+Processing ../Scripts/ChargeFlipTruthv5.C("ttbar","_Default",true,false,"_nJets_le1","l1_IDTight==1 && l2_IDTight==1","all",false)...
+EtaBinning: 0, 1.37, 1.52, 2, 2.6,  
+PtBinning: 20, 50, 100, 200, 2500,  
+### Printing settings: 
+- Preselection: ((1) && (l1_IDTight==1 && l2_IDTight==1))
+- Extra cut: l1_IDTight==1 && l2_IDTight==1
+- Sel. lep 1: ((1) && (l1_IDTight==1 && l2_IDTight==1)) && (((l1_IFF==3)) || (l1_pt<0))
+- Sel. lep 2: ((1) && (l1_IDTight==1 && l2_IDTight==1)) && (((l2_IFF==3)) || (l2_pt<0))
+- Selection RnoR (1) :((1) && (l1_IDTight==1 && l2_IDTight==1)) && ((((l1_IFF==2)) && !((l2_IFF==2)) && same_charge==1))
+- Selection RnoR (2) :((1) && (l1_IDTight==1 && l2_IDTight==1)) && ((((l2_IFF==2)) && !((l1_IFF==2)) && same_charge==1))
+-- Opening file :/eos/user/s/shuhui/public/Run3_HHML/v5_ntuples_wIFF/hhml_v5_2lSC_ttbar_dilep_mc.root
+-- Tree entries:486540
+###--------- DEBUG : For e- and e+: ------
+### DEBUG : qFlip: leading e- : 0
+### DEBUG : qFlip: sub-leading e- : 0
+### DEBUG : qFlip: e- : 0
+### DEBUG : qFlip: leading e+ : 0
+### DEBUG : qFlip: sub-leading e+ : 0
+### DEBUG : qFlip: e+ : 0
+............................................................
+### DEBUG : All: leading e- : 0
+### DEBUG : All: sub-leading e- : 0
+### DEBUG : All: e- : 0
+### DEBUG : All: leading e+ : 0
+### DEBUG : All: sub-leading e+ : 0
+### DEBUG : All: e+ : 0
+###--------- DEBUG : For event category: --------
+### DEBUG : RR: 31527.7
+### DEBUG : QQ: 0
+### DEBUG : RQ: 10.3614
+### DEBUG : QF (for qFlip): 0.0419191
+### DEBUG : QF (for Fakes): 0.0419191
+### DEBUG : RF: 71.8802
+### DEBUG : FF: 0.0842539
+### DEBUG : QF SS (for Fakes): 0
+### DEBUG : RF SS: 29.8965
+### DEBUG : FF SS: 0
+### DEBUG : RnoR: 40.258
+###--------- DEBUG : For ALL: --------
+### DEBUG : track 1: 6.85856
+### DEBUG : track 2: 3.5448
+### DEBUG : photon 1: 0
+### DEBUG : photon 2: 0
+### DEBUG : total 1: 6.85856
+### DEBUG : total 2: 3.5448
+### DEBUG : total track: 10.4034
+### DEBUG : total photon: 0
+### DEBUG : total all num: 10.4034
+### DEBUG : total all den1: 15846.2
+### DEBUG : total all den2: 15846.2
+### DEBUG : total all den: 31692.4

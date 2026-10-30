@@ -1,0 +1,187 @@
+
+Processing ../Scripts/Likelihoodv5.C("ttbar")...
+## Initializing execution of Likelihood method with the following settings: 
+-- isData :0
+-- doBDT :0
+-- subtractBkg : 1
+-- Eta binning : 4
+0, 1.37, 1.52, 2, 2.6,  
+-- Pt binning : 4
+20, 50, 100, 200, 2600,  
+-- Apply nJets cut: 0
+-- Apply Ht cut: -1, -1
+## Reading file list from : ../Inputlists_v5/ttbarMC.list
+## Initializing 4D vectors...
+Check vector normalization (should be zero):
+**** --> Compare this number with the one above (it no bkg subtraction then they should match perfectly) --> Total : 0
+-- Opening file :/eos/user/s/shuhui/public/Run3_HHML/v5_ntuples/hhml_v5_2lSC_ttbar_dilep_mc.root
+-- Tree entries:486540
+-- event: 0
+-- event: 100000
+-- event: 200000
+-- event: 300000
+-- event: 400000
+***** Total events used from this sample : 4219.26
+-- outside the interesting range: 11495.1
+Check vector normalization (should be different from zero):
+**** --> Compare this number with the one above (it no bkg subtraction then they should match perfectly) --> Total : 1125.17
+-- Will read file reference :../run_31March/Truth_MC_Unweighted_Full/ttbar_Default_nJets_le1.root
+--shuhui-- GetHisto with name :ttbar_Default_nJets_le1_all_num
+--shuhui-- GetHisto Content :6.48729e-05
+--shuhui-- GetHisto Content :0.000358027
+--shuhui-- GetHisto Content :0.00158245
+--shuhui-- GetHisto Content :0.00424536
+--shuhui-- GetHisto Content :0
+--shuhui-- GetHisto Content :0
+--shuhui-- GetHisto Content :0
+--shuhui-- GetHisto Content :0
+--shuhui-- GetHisto Content :0.000678278
+--shuhui-- GetHisto Content :0.00179135
+--shuhui-- GetHisto Content :0.00890869
+--shuhui-- GetHisto Content :0.0244386
+--shuhui-- GetHisto Content :0.000792938
+--shuhui-- GetHisto Content :0.003514
+--shuhui-- GetHisto Content :0.0118249
+--shuhui-- GetHisto Content :0.0315638
+--shuhui-- After GetReferenceHistos(), reference.size = 2
+-- In loop: trying reference histo :1
+--shuhui-- In ComputeRates() reference.size = 16
+--shuhui-- reference[0] = 6.48729e-05
+--shuhui-- reference[1] = 0.000358027
+--shuhui-- reference[2] = 0.00158245
+--shuhui-- reference[3] = 0.00424536
+--shuhui-- reference[4] = 0
+--shuhui-- reference[5] = 0
+--shuhui-- reference[6] = 0
+--shuhui-- reference[7] = 0
+--shuhui-- reference[8] = 0.000678278
+--shuhui-- reference[9] = 0.00179135
+--shuhui-- reference[10] = 0.00890869
+--shuhui-- reference[11] = 0.0244386
+--shuhui-- reference[12] = 0.000792938
+--shuhui-- reference[13] = 0.003514
+--shuhui-- reference[14] = 0.0118249
+--shuhui-- reference[15] = 0.0315638
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 epsilon_1    6.48729e-05  1.00000e-12    5.00000e-13  9.90000e-01
+     2 epsilon_2    3.58027e-04  1.00000e-12    5.00000e-13  9.90000e-01
+     3 epsilon_3    1.58245e-03  1.00000e-12    5.00000e-13  9.90000e-01
+     4 epsilon_4    4.24536e-03  1.00000e-12    5.00000e-13  9.90000e-01
+     9 epsilon_9    6.78278e-04  1.00000e-12    5.00000e-13  9.90000e-01
+    10 epsilon_10   1.79135e-03  1.00000e-12    5.00000e-13  9.90000e-01
+    11 epsilon_11   8.90869e-03  1.00000e-12    5.00000e-13  9.90000e-01
+    12 epsilon_12   2.44386e-02  1.00000e-12    5.00000e-13  9.90000e-01
+    13 epsilon_13   7.92938e-04  1.00000e-12    5.00000e-13  9.90000e-01
+    14 epsilon_14   3.51400e-03  1.00000e-12    5.00000e-13  9.90000e-01
+    15 epsilon_15   1.18249e-02  1.00000e-12    5.00000e-13  9.90000e-01
+    16 epsilon_16   3.15638e-02  1.00000e-12    5.00000e-13  9.90000e-01
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET ERRDEF           1
+ **********
+ **********
+ **    3 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    4 **MIGRAD       1e+07
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-04
+ FCN=7.92141 FROM MIGRAD    STATUS=INITIATE      864 CALLS         865 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  epsilon_1    2.02693e-03   1.00000e-12   0.00000e+00   6.59780e-01
+   2  epsilon_2    3.58027e-04   1.00000e-12   0.00000e+00  -1.83343e+01
+   3  epsilon_3    1.58245e-03   1.00000e-12   0.00000e+00   1.39916e+00
+   4  epsilon_4    4.24536e-03   1.00000e-12   0.00000e+00  -3.70444e-01
+   9  epsilon_9    6.78278e-04   1.00000e-12   0.00000e+00  -1.63012e+00
+  10  epsilon_10   1.79135e-03   1.00000e-12   0.00000e+00   1.59719e+00
+  11  epsilon_11   8.90869e-03   1.00000e-12   0.00000e+00  -1.05476e-01
+  12  epsilon_12   2.44386e-02   1.00000e-12   0.00000e+00   8.69328e-03
+  13  epsilon_13   7.92938e-04   1.00000e-12   0.00000e+00  -1.54965e+00
+  14  epsilon_14   3.51400e-03   1.00000e-12   0.00000e+00   1.90878e+00
+  15  epsilon_15   1.18249e-02   1.00000e-12   0.00000e+00   4.56003e-01
+  16  epsilon_16   3.15638e-02   1.00000e-12   0.00000e+00   0.00000e+00
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=5.3871 FROM MIGRAD    STATUS=CONVERGED    1696 CALLS        1697 TOTAL
+                     EDM=4.50377e-06    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   0.1 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  epsilon_1    1.33275e-03   2.15176e-03   2.76165e-05  -4.77638e-02
+   2  epsilon_2    2.27698e-03   3.27524e-03  -5.09382e-05  -3.13207e-02
+   3  epsilon_3    5.00055e-13   1.87383e-11   9.54959e-08** at limit **
+   4  epsilon_4    7.76676e-02   5.16043e-01   3.29990e-03  -1.77880e-03
+   9  epsilon_9    5.00000e-13   1.57226e-11   6.70776e-08** at limit **
+  10  epsilon_10   5.70466e-08   2.67518e-07   4.21373e-06** at limit **
+  11  epsilon_11   9.87591e-03   4.96094e-02   2.92793e-04   1.49825e-03
+  12  epsilon_12   4.71810e-07   9.22726e-01  -1.76248e-03  -3.86776e-05
+  13  epsilon_13   2.55210e-03   7.20723e-03   5.06159e-04   1.37160e-02
+  14  epsilon_14   2.36516e-03   8.79025e-03   2.84878e-04   1.88892e-02
+  15  epsilon_15   5.00000e-13   6.51241e-11  -3.49200e-09** at limit **
+  16  epsilon_16   3.15638e-02   6.04682e-01  -0.00000e+00   0.00000e+00
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 12    ERR DEF=1
+ ELEMENTS ABOVE DIAGONAL ARE NOT PRINTED.
+  4.636e-06 
+ -1.928e-06  1.074e-05 
+ -7.623e-19 -1.739e-18  3.692e-27 
+ -5.735e-05  5.886e-05  1.815e-15  1.158e-01 
+  6.990e-19 -1.272e-18 -1.871e-28  4.807e-16  8.510e-28 
+  2.122e-10 -1.417e-10  1.055e-20  9.426e-09 -4.623e-22  6.104e-14 
+ -8.779e-07 -2.014e-07  1.239e-17  2.376e-05 -5.186e-18 -4.025e-10  2.014e-03 
+  2.553e-07 -2.218e-09 -1.983e-18  7.418e-06  1.185e-18  7.973e-11  1.718e-07  3.510e-05 
+ -2.803e-06  1.105e-06  1.706e-17  8.284e-05 -1.700e-17 -1.801e-09 -9.361e-06 -5.717e-08  5.231e-05 
+ -2.978e-08  3.752e-06 -1.533e-17  1.632e-04  4.866e-18 -1.083e-11 -4.683e-06 -2.767e-07 -4.714e-06  7.814e-05 
+  6.684e-20 -3.101e-19 -9.216e-30 -1.258e-17  6.257e-30 -9.627e-23  6.561e-20  2.556e-20 -6.274e-19  6.956e-19  9.417e-29 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  6.050e-02 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      9     10     11     12     13     14     15     16
+        1  0.22060   1.000 -0.273 -0.006 -0.078  0.011  0.399 -0.009  0.020 -0.180 -0.002  0.003  0.000
+        2  0.29517  -0.273  1.000 -0.009  0.053 -0.013 -0.175 -0.001 -0.000  0.047  0.130 -0.010  0.000
+        3  0.00000  -0.006 -0.009  1.000  0.088 -0.106  0.703  0.005 -0.006  0.039 -0.029 -0.016  0.000
+        4  0.06217  -0.078  0.053  0.088  1.000  0.048  0.112  0.002  0.004  0.034  0.054 -0.004  0.000
+        9  0.11242   0.011 -0.013 -0.106  0.048  1.000 -0.064 -0.004  0.007 -0.081  0.019  0.022  0.000
+       10  1.28370   0.399 -0.175  0.703  0.112 -0.064  1.000 -0.036  0.054 -1.008 -0.005 -0.040  0.000
+       11  0.00000  -0.009 -0.001  0.005  0.002 -0.004 -0.036  1.000  0.001 -0.029 -0.012  0.000  0.000
+       12  0.00000   0.020 -0.000 -0.006  0.004  0.007  0.054  0.001  1.000 -0.001 -0.005  0.000  0.000
+       13  1.69939  -0.180  0.047  0.039  0.034 -0.081 -1.008 -0.029 -0.001  1.000 -0.074 -0.009  0.000
+       14  0.15175  -0.002  0.130 -0.029  0.054  0.019 -0.005 -0.012 -0.005 -0.074  1.000  0.008  0.000
+       15  0.00000   0.003 -0.010 -0.016 -0.004  0.022 -0.040  0.000  0.000 -0.009  0.008  1.000  0.000
+       16  0.00000   0.000  0.000  0.000  0.000  0.000  0.000  0.000  0.000  0.000  0.000  0.000  1.000
+
+ Minimum fonction = 5.3871
+ Estimated vert. distance to min. = 4.50377e-06
+ Number of variable parameters = 12
+ Highest number of parameters defined by user = 16
+ Status of covariance matrix = 3
+
+ pname :epsilon_1, val: 0.00133275
+-------Eta : 1, pt : 1
+ pname :epsilon_2, val: 0.00227698
+-------Eta : 1, pt : 2
+ pname :epsilon_3, val: 5.00055e-13
+-------Eta : 1, pt : 3
+ pname :epsilon_4, val: 0.0776676
+-------Eta : 1, pt : 4
+ pname :epsilon_9, val: 5e-13
+-------Eta : 3, pt : 1
+ pname :epsilon_10, val: 5.70466e-08
+-------Eta : 3, pt : 2
+ pname :epsilon_11, val: 0.00987591
+-------Eta : 3, pt : 3
+ pname :epsilon_12, val: 4.7181e-07
+-------Eta : 3, pt : 4
+ pname :epsilon_13, val: 0.0025521
+-------Eta : 4, pt : 1
+ pname :epsilon_14, val: 0.00236516
+-------Eta : 4, pt : 2
+ pname :epsilon_15, val: 5e-13
+-------Eta : 4, pt : 3
+ pname :epsilon_16, val: 0.0315638
+-------Eta : 4, pt : 4
+-- Rates have been succesfully computed...

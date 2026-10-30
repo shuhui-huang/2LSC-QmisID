@@ -1,0 +1,1084 @@
+
+Processing ../Scripts/Likelihoodv5.C("Zjets")...
+## Initializing execution of Likelihood method with the following settings: 
+-- isData :0
+-- doBDT :0
+-- subtractBkg : 1
+-- Eta binning : 4
+0, 1.37, 1.52, 2, 2.6,  
+-- Pt binning : 4
+20, 50, 100, 200, 2600,  
+-- Apply nJets cut: 0
+-- Apply Ht cut: -1, -1
+## Reading file list from : ../Inputlists_v5/ZjetsMC.list
+## Initializing 4D vectors...
+Check vector normalization (should be zero):
+**** --> Compare this number with the one above (it no bkg subtraction then they should match perfectly) --> Total : 0
+-- Opening file :/eos/user/s/shuhui/public/Run3_HHML/v5_ntuples/hhml_v5_2lSC_Zee_all_mc.root
+-- Tree entries:89603504
+-- event: 0
+-- event: 100000
+-- event: 200000
+-- event: 300000
+-- event: 400000
+-- event: 500000
+-- event: 600000
+-- event: 700000
+-- event: 800000
+-- event: 900000
+-- event: 1000000
+-- event: 1100000
+-- event: 1200000
+-- event: 1300000
+-- event: 1400000
+-- event: 1500000
+-- event: 1600000
+-- event: 1700000
+-- event: 1800000
+-- event: 1900000
+-- event: 2000000
+-- event: 2100000
+-- event: 2200000
+-- event: 2300000
+-- event: 2400000
+-- event: 2500000
+-- event: 2600000
+-- event: 2700000
+-- event: 2800000
+-- event: 2900000
+-- event: 3000000
+-- event: 3100000
+-- event: 3200000
+-- event: 3300000
+-- event: 3400000
+-- event: 3500000
+-- event: 3600000
+-- event: 3700000
+-- event: 3800000
+-- event: 3900000
+-- event: 4000000
+-- event: 4100000
+-- event: 4200000
+-- event: 4300000
+-- event: 4400000
+-- event: 4500000
+-- event: 4600000
+-- event: 4700000
+-- event: 4800000
+-- event: 4900000
+-- event: 5000000
+-- event: 5100000
+-- event: 5200000
+-- event: 5300000
+-- event: 5400000
+-- event: 5500000
+-- event: 5600000
+-- event: 5700000
+-- event: 5800000
+-- event: 5900000
+-- event: 6000000
+-- event: 6100000
+-- event: 6200000
+-- event: 6300000
+-- event: 6400000
+-- event: 6500000
+-- event: 6600000
+-- event: 6700000
+-- event: 6800000
+-- event: 6900000
+-- event: 7000000
+-- event: 7100000
+-- event: 7200000
+-- event: 7300000
+-- event: 7400000
+-- event: 7500000
+-- event: 7600000
+-- event: 7700000
+-- event: 7800000
+-- event: 7900000
+-- event: 8000000
+-- event: 8100000
+-- event: 8200000
+-- event: 8300000
+-- event: 8400000
+-- event: 8500000
+-- event: 8600000
+-- event: 8700000
+-- event: 8800000
+-- event: 8900000
+-- event: 9000000
+-- event: 9100000
+-- event: 9200000
+-- event: 9300000
+-- event: 9400000
+-- event: 9500000
+-- event: 9600000
+-- event: 9700000
+-- event: 9800000
+-- event: 9900000
+-- event: 10000000
+-- event: 10100000
+-- event: 10200000
+-- event: 10300000
+-- event: 10400000
+-- event: 10500000
+-- event: 10600000
+-- event: 10700000
+-- event: 10800000
+-- event: 10900000
+-- event: 11000000
+-- event: 11100000
+-- event: 11200000
+-- event: 11300000
+-- event: 11400000
+-- event: 11500000
+-- event: 11600000
+-- event: 11700000
+-- event: 11800000
+-- event: 11900000
+-- event: 12000000
+-- event: 12100000
+-- event: 12200000
+-- event: 12300000
+-- event: 12400000
+-- event: 12500000
+-- event: 12600000
+-- event: 12700000
+-- event: 12800000
+-- event: 12900000
+-- event: 13000000
+-- event: 13100000
+-- event: 13200000
+-- event: 13300000
+-- event: 13400000
+-- event: 13500000
+-- event: 13600000
+-- event: 13700000
+-- event: 13800000
+-- event: 13900000
+-- event: 14000000
+-- event: 14100000
+-- event: 14200000
+-- event: 14300000
+-- event: 14400000
+-- event: 14500000
+-- event: 14600000
+-- event: 14700000
+-- event: 14800000
+-- event: 14900000
+-- event: 15000000
+-- event: 15100000
+-- event: 15200000
+-- event: 15300000
+-- event: 15400000
+-- event: 15500000
+-- event: 15600000
+-- event: 15700000
+-- event: 15800000
+-- event: 15900000
+-- event: 16000000
+-- event: 16100000
+-- event: 16200000
+-- event: 16300000
+-- event: 16400000
+-- event: 16500000
+-- event: 16600000
+-- event: 16700000
+-- event: 16800000
+-- event: 16900000
+-- event: 17000000
+-- event: 17100000
+-- event: 17200000
+-- event: 17300000
+-- event: 17400000
+-- event: 17500000
+-- event: 17600000
+-- event: 17700000
+-- event: 17800000
+-- event: 17900000
+-- event: 18000000
+-- event: 18100000
+-- event: 18200000
+-- event: 18300000
+-- event: 18400000
+-- event: 18500000
+-- event: 18600000
+-- event: 18700000
+-- event: 18800000
+-- event: 18900000
+-- event: 19000000
+-- event: 19100000
+-- event: 19200000
+-- event: 19300000
+-- event: 19400000
+-- event: 19500000
+-- event: 19600000
+-- event: 19700000
+-- event: 19800000
+-- event: 19900000
+-- event: 20000000
+-- event: 20100000
+-- event: 20200000
+-- event: 20300000
+-- event: 20400000
+-- event: 20500000
+-- event: 20600000
+-- event: 20700000
+-- event: 20800000
+-- event: 20900000
+-- event: 21000000
+-- event: 21100000
+-- event: 21200000
+-- event: 21300000
+-- event: 21400000
+-- event: 21500000
+-- event: 21600000
+-- event: 21700000
+-- event: 21800000
+-- event: 21900000
+-- event: 22000000
+-- event: 22100000
+-- event: 22200000
+-- event: 22300000
+-- event: 22400000
+-- event: 22500000
+-- event: 22600000
+-- event: 22700000
+-- event: 22800000
+-- event: 22900000
+-- event: 23000000
+-- event: 23100000
+-- event: 23200000
+-- event: 23300000
+-- event: 23400000
+-- event: 23500000
+-- event: 23600000
+-- event: 23700000
+-- event: 23800000
+-- event: 23900000
+-- event: 24000000
+-- event: 24100000
+-- event: 24200000
+-- event: 24300000
+-- event: 24400000
+-- event: 24500000
+-- event: 24600000
+-- event: 24700000
+-- event: 24800000
+-- event: 24900000
+-- event: 25000000
+-- event: 25100000
+-- event: 25200000
+-- event: 25300000
+-- event: 25400000
+-- event: 25500000
+-- event: 25600000
+-- event: 25700000
+-- event: 25800000
+-- event: 25900000
+-- event: 26000000
+-- event: 26100000
+-- event: 26200000
+-- event: 26300000
+-- event: 26400000
+-- event: 26500000
+Something is wrong with this event: Check eta and pT
+eta1, eta2, pt1, pt2 :0.333138, 0.534402, 2690.22, 69.2984
+assigning : pt1 :3
+-- event: 26600000
+-- event: 26700000
+-- event: 26800000
+-- event: 26900000
+-- event: 27000000
+-- event: 27100000
+-- event: 27200000
+-- event: 27300000
+-- event: 27400000
+-- event: 27500000
+-- event: 27600000
+-- event: 27700000
+-- event: 27800000
+-- event: 27900000
+-- event: 28000000
+-- event: 28100000
+-- event: 28200000
+-- event: 28300000
+-- event: 28400000
+-- event: 28500000
+-- event: 28600000
+-- event: 28700000
+-- event: 28800000
+-- event: 28900000
+-- event: 29000000
+-- event: 29100000
+-- event: 29200000
+-- event: 29300000
+-- event: 29400000
+-- event: 29500000
+-- event: 29600000
+-- event: 29700000
+-- event: 29800000
+-- event: 29900000
+-- event: 30000000
+-- event: 30100000
+-- event: 30200000
+-- event: 30300000
+-- event: 30400000
+-- event: 30500000
+-- event: 30600000
+-- event: 30700000
+-- event: 30800000
+-- event: 30900000
+-- event: 31000000
+-- event: 31100000
+-- event: 31200000
+-- event: 31300000
+-- event: 31400000
+-- event: 31500000
+-- event: 31600000
+-- event: 31700000
+-- event: 31800000
+-- event: 31900000
+-- event: 32000000
+-- event: 32100000
+-- event: 32200000
+-- event: 32300000
+-- event: 32400000
+-- event: 32500000
+-- event: 32600000
+-- event: 32700000
+-- event: 32800000
+-- event: 32900000
+-- event: 33000000
+-- event: 33100000
+-- event: 33200000
+-- event: 33300000
+-- event: 33400000
+-- event: 33500000
+-- event: 33600000
+-- event: 33700000
+-- event: 33800000
+-- event: 33900000
+-- event: 34000000
+-- event: 34100000
+-- event: 34200000
+-- event: 34300000
+-- event: 34400000
+-- event: 34500000
+-- event: 34600000
+-- event: 34700000
+-- event: 34800000
+-- event: 34900000
+-- event: 35000000
+-- event: 35100000
+-- event: 35200000
+-- event: 35300000
+-- event: 35400000
+-- event: 35500000
+-- event: 35600000
+-- event: 35700000
+-- event: 35800000
+-- event: 35900000
+-- event: 36000000
+-- event: 36100000
+-- event: 36200000
+-- event: 36300000
+-- event: 36400000
+-- event: 36500000
+-- event: 36600000
+-- event: 36700000
+-- event: 36800000
+-- event: 36900000
+-- event: 37000000
+-- event: 37100000
+-- event: 37200000
+-- event: 37300000
+-- event: 37400000
+-- event: 37500000
+-- event: 37600000
+-- event: 37700000
+-- event: 37800000
+-- event: 37900000
+-- event: 38000000
+-- event: 38100000
+-- event: 38200000
+-- event: 38300000
+-- event: 38400000
+-- event: 38500000
+-- event: 38600000
+-- event: 38700000
+-- event: 38800000
+-- event: 38900000
+-- event: 39000000
+-- event: 39100000
+-- event: 39200000
+-- event: 39300000
+-- event: 39400000
+-- event: 39500000
+-- event: 39600000
+-- event: 39700000
+-- event: 39800000
+-- event: 39900000
+-- event: 40000000
+-- event: 40100000
+-- event: 40200000
+-- event: 40300000
+-- event: 40400000
+-- event: 40500000
+-- event: 40600000
+-- event: 40700000
+-- event: 40800000
+-- event: 40900000
+-- event: 41000000
+-- event: 41100000
+-- event: 41200000
+-- event: 41300000
+-- event: 41400000
+-- event: 41500000
+-- event: 41600000
+-- event: 41700000
+-- event: 41800000
+-- event: 41900000
+-- event: 42000000
+-- event: 42100000
+-- event: 42200000
+-- event: 42300000
+-- event: 42400000
+-- event: 42500000
+-- event: 42600000
+-- event: 42700000
+-- event: 42800000
+-- event: 42900000
+-- event: 43000000
+-- event: 43100000
+-- event: 43200000
+-- event: 43300000
+-- event: 43400000
+-- event: 43500000
+-- event: 43600000
+-- event: 43700000
+-- event: 43800000
+-- event: 43900000
+-- event: 44000000
+-- event: 44100000
+-- event: 44200000
+-- event: 44300000
+-- event: 44400000
+-- event: 44500000
+-- event: 44600000
+-- event: 44700000
+-- event: 44800000
+-- event: 44900000
+-- event: 45000000
+-- event: 45100000
+-- event: 45200000
+-- event: 45300000
+-- event: 45400000
+-- event: 45500000
+-- event: 45600000
+-- event: 45700000
+-- event: 45800000
+-- event: 45900000
+-- event: 46000000
+-- event: 46100000
+-- event: 46200000
+-- event: 46300000
+-- event: 46400000
+-- event: 46500000
+-- event: 46600000
+-- event: 46700000
+-- event: 46800000
+-- event: 46900000
+-- event: 47000000
+-- event: 47100000
+-- event: 47200000
+-- event: 47300000
+-- event: 47400000
+-- event: 47500000
+-- event: 47600000
+-- event: 47700000
+-- event: 47800000
+-- event: 47900000
+-- event: 48000000
+-- event: 48100000
+-- event: 48200000
+-- event: 48300000
+-- event: 48400000
+-- event: 48500000
+-- event: 48600000
+-- event: 48700000
+-- event: 48800000
+-- event: 48900000
+-- event: 49000000
+-- event: 49100000
+-- event: 49200000
+-- event: 49300000
+-- event: 49400000
+-- event: 49500000
+-- event: 49600000
+-- event: 49700000
+-- event: 49800000
+-- event: 49900000
+-- event: 50000000
+-- event: 50100000
+-- event: 50200000
+-- event: 50300000
+-- event: 50400000
+-- event: 50500000
+-- event: 50600000
+-- event: 50700000
+-- event: 50800000
+-- event: 50900000
+-- event: 51000000
+-- event: 51100000
+-- event: 51200000
+-- event: 51300000
+-- event: 51400000
+-- event: 51500000
+-- event: 51600000
+-- event: 51700000
+-- event: 51800000
+-- event: 51900000
+-- event: 52000000
+-- event: 52100000
+-- event: 52200000
+-- event: 52300000
+-- event: 52400000
+-- event: 52500000
+-- event: 52600000
+-- event: 52700000
+-- event: 52800000
+-- event: 52900000
+-- event: 53000000
+-- event: 53100000
+-- event: 53200000
+-- event: 53300000
+-- event: 53400000
+-- event: 53500000
+-- event: 53600000
+-- event: 53700000
+-- event: 53800000
+-- event: 53900000
+-- event: 54000000
+-- event: 54100000
+-- event: 54200000
+-- event: 54300000
+-- event: 54400000
+-- event: 54500000
+-- event: 54600000
+-- event: 54700000
+-- event: 54800000
+-- event: 54900000
+-- event: 55000000
+-- event: 55100000
+-- event: 55200000
+-- event: 55300000
+-- event: 55400000
+-- event: 55500000
+-- event: 55600000
+-- event: 55700000
+-- event: 55800000
+-- event: 55900000
+-- event: 56000000
+-- event: 56100000
+-- event: 56200000
+-- event: 56300000
+-- event: 56400000
+-- event: 56500000
+-- event: 56600000
+-- event: 56700000
+-- event: 56800000
+-- event: 56900000
+-- event: 57000000
+-- event: 57100000
+-- event: 57200000
+-- event: 57300000
+-- event: 57400000
+-- event: 57500000
+-- event: 57600000
+-- event: 57700000
+-- event: 57800000
+-- event: 57900000
+-- event: 58000000
+-- event: 58100000
+-- event: 58200000
+-- event: 58300000
+-- event: 58400000
+-- event: 58500000
+-- event: 58600000
+-- event: 58700000
+-- event: 58800000
+-- event: 58900000
+-- event: 59000000
+-- event: 59100000
+-- event: 59200000
+-- event: 59300000
+-- event: 59400000
+-- event: 59500000
+-- event: 59600000
+-- event: 59700000
+-- event: 59800000
+-- event: 59900000
+-- event: 60000000
+-- event: 60100000
+-- event: 60200000
+-- event: 60300000
+-- event: 60400000
+-- event: 60500000
+-- event: 60600000
+-- event: 60700000
+-- event: 60800000
+-- event: 60900000
+-- event: 61000000
+-- event: 61100000
+-- event: 61200000
+-- event: 61300000
+-- event: 61400000
+-- event: 61500000
+-- event: 61600000
+-- event: 61700000
+-- event: 61800000
+-- event: 61900000
+-- event: 62000000
+-- event: 62100000
+-- event: 62200000
+-- event: 62300000
+-- event: 62400000
+-- event: 62500000
+-- event: 62600000
+-- event: 62700000
+-- event: 62800000
+-- event: 62900000
+-- event: 63000000
+-- event: 63100000
+-- event: 63200000
+-- event: 63300000
+-- event: 63400000
+-- event: 63500000
+-- event: 63600000
+-- event: 63700000
+-- event: 63800000
+-- event: 63900000
+-- event: 64000000
+-- event: 64100000
+-- event: 64200000
+-- event: 64300000
+-- event: 64400000
+-- event: 64500000
+-- event: 64600000
+-- event: 64700000
+-- event: 64800000
+-- event: 64900000
+-- event: 65000000
+-- event: 65100000
+-- event: 65200000
+-- event: 65300000
+-- event: 65400000
+-- event: 65500000
+-- event: 65600000
+-- event: 65700000
+-- event: 65800000
+-- event: 65900000
+-- event: 66000000
+-- event: 66100000
+-- event: 66200000
+-- event: 66300000
+-- event: 66400000
+-- event: 66500000
+-- event: 66600000
+-- event: 66700000
+-- event: 66800000
+-- event: 66900000
+-- event: 67000000
+-- event: 67100000
+-- event: 67200000
+-- event: 67300000
+-- event: 67400000
+-- event: 67500000
+-- event: 67600000
+-- event: 67700000
+-- event: 67800000
+-- event: 67900000
+-- event: 68000000
+-- event: 68100000
+-- event: 68200000
+-- event: 68300000
+-- event: 68400000
+-- event: 68500000
+-- event: 68600000
+-- event: 68700000
+-- event: 68800000
+-- event: 68900000
+-- event: 69000000
+-- event: 69100000
+-- event: 69200000
+-- event: 69300000
+-- event: 69400000
+-- event: 69500000
+-- event: 69600000
+-- event: 69700000
+-- event: 69800000
+-- event: 69900000
+-- event: 70000000
+-- event: 70100000
+-- event: 70200000
+-- event: 70300000
+-- event: 70400000
+-- event: 70500000
+-- event: 70600000
+-- event: 70700000
+-- event: 70800000
+-- event: 70900000
+-- event: 71000000
+-- event: 71100000
+-- event: 71200000
+-- event: 71300000
+-- event: 71400000
+-- event: 71500000
+-- event: 71600000
+-- event: 71700000
+-- event: 71800000
+-- event: 71900000
+-- event: 72000000
+-- event: 72100000
+-- event: 72200000
+-- event: 72300000
+-- event: 72400000
+-- event: 72500000
+-- event: 72600000
+-- event: 72700000
+-- event: 72800000
+-- event: 72900000
+-- event: 73000000
+-- event: 73100000
+-- event: 73200000
+-- event: 73300000
+-- event: 73400000
+-- event: 73500000
+-- event: 73600000
+-- event: 73700000
+-- event: 73800000
+-- event: 73900000
+-- event: 74000000
+-- event: 74100000
+-- event: 74200000
+-- event: 74300000
+-- event: 74400000
+-- event: 74500000
+-- event: 74600000
+-- event: 74700000
+-- event: 74800000
+-- event: 74900000
+-- event: 75000000
+-- event: 75100000
+-- event: 75200000
+-- event: 75300000
+-- event: 75400000
+-- event: 75500000
+-- event: 75600000
+-- event: 75700000
+-- event: 75800000
+-- event: 75900000
+-- event: 76000000
+-- event: 76100000
+-- event: 76200000
+-- event: 76300000
+-- event: 76400000
+-- event: 76500000
+-- event: 76600000
+-- event: 76700000
+-- event: 76800000
+-- event: 76900000
+-- event: 77000000
+-- event: 77100000
+-- event: 77200000
+-- event: 77300000
+-- event: 77400000
+-- event: 77500000
+-- event: 77600000
+-- event: 77700000
+-- event: 77800000
+-- event: 77900000
+-- event: 78000000
+-- event: 78100000
+-- event: 78200000
+-- event: 78300000
+-- event: 78400000
+-- event: 78500000
+-- event: 78600000
+-- event: 78700000
+-- event: 78800000
+-- event: 78900000
+-- event: 79000000
+-- event: 79100000
+-- event: 79200000
+-- event: 79300000
+-- event: 79400000
+-- event: 79500000
+-- event: 79600000
+-- event: 79700000
+-- event: 79800000
+-- event: 79900000
+-- event: 80000000
+-- event: 80100000
+-- event: 80200000
+-- event: 80300000
+-- event: 80400000
+-- event: 80500000
+-- event: 80600000
+-- event: 80700000
+-- event: 80800000
+-- event: 80900000
+-- event: 81000000
+-- event: 81100000
+-- event: 81200000
+-- event: 81300000
+-- event: 81400000
+-- event: 81500000
+-- event: 81600000
+-- event: 81700000
+-- event: 81800000
+-- event: 81900000
+-- event: 82000000
+-- event: 82100000
+-- event: 82200000
+-- event: 82300000
+-- event: 82400000
+-- event: 82500000
+-- event: 82600000
+-- event: 82700000
+-- event: 82800000
+-- event: 82900000
+-- event: 83000000
+-- event: 83100000
+-- event: 83200000
+-- event: 83300000
+-- event: 83400000
+-- event: 83500000
+-- event: 83600000
+-- event: 83700000
+-- event: 83800000
+-- event: 83900000
+-- event: 84000000
+-- event: 84100000
+-- event: 84200000
+-- event: 84300000
+-- event: 84400000
+-- event: 84500000
+-- event: 84600000
+-- event: 84700000
+-- event: 84800000
+-- event: 84900000
+-- event: 85000000
+-- event: 85100000
+-- event: 85200000
+-- event: 85300000
+-- event: 85400000
+-- event: 85500000
+-- event: 85600000
+-- event: 85700000
+-- event: 85800000
+-- event: 85900000
+-- event: 86000000
+-- event: 86100000
+-- event: 86200000
+-- event: 86300000
+-- event: 86400000
+-- event: 86500000
+-- event: 86600000
+-- event: 86700000
+-- event: 86800000
+-- event: 86900000
+-- event: 87000000
+-- event: 87100000
+-- event: 87200000
+-- event: 87300000
+-- event: 87400000
+-- event: 87500000
+-- event: 87600000
+-- event: 87700000
+-- event: 87800000
+-- event: 87900000
+-- event: 88000000
+-- event: 88100000
+-- event: 88200000
+-- event: 88300000
+-- event: 88400000
+-- event: 88500000
+-- event: 88600000
+-- event: 88700000
+-- event: 88800000
+-- event: 88900000
+-- event: 89000000
+-- event: 89100000
+-- event: 89200000
+-- event: 89300000
+-- event: 89400000
+-- event: 89500000
+-- event: 89600000
+***** Total events used from this sample : 4.22249e+07
+-- outside the interesting range: 2.36146e+06
+Check vector normalization (should be different from zero):
+**** --> Compare this number with the one above (it no bkg subtraction then they should match perfectly) --> Total : 3.82221e+07
+-- Will read file reference :../run_31March/Truth_MC_Unweighted_Full/Zjets_Default_nJets_le1.root
+--shuhui-- GetHisto with name :Zjets_Default_nJets_le1_all_num
+--shuhui-- GetHisto Content :0.000131927
+--shuhui-- GetHisto Content :0.000395116
+--shuhui-- GetHisto Content :0.00157707
+--shuhui-- GetHisto Content :0.00629505
+--shuhui-- GetHisto Content :0
+--shuhui-- GetHisto Content :0
+--shuhui-- GetHisto Content :0
+--shuhui-- GetHisto Content :0
+--shuhui-- GetHisto Content :0.000478484
+--shuhui-- GetHisto Content :0.0015705
+--shuhui-- GetHisto Content :0.00838432
+--shuhui-- GetHisto Content :0.0280919
+--shuhui-- GetHisto Content :0.000793614
+--shuhui-- GetHisto Content :0.00291103
+--shuhui-- GetHisto Content :0.0140048
+--shuhui-- GetHisto Content :0.0406583
+--shuhui-- After GetReferenceHistos(), reference.size = 2
+-- In loop: trying reference histo :1
+--shuhui-- In ComputeRates() reference.size = 16
+--shuhui-- reference[0] = 0.000131927
+--shuhui-- reference[1] = 0.000395116
+--shuhui-- reference[2] = 0.00157707
+--shuhui-- reference[3] = 0.00629505
+--shuhui-- reference[4] = 0
+--shuhui-- reference[5] = 0
+--shuhui-- reference[6] = 0
+--shuhui-- reference[7] = 0
+--shuhui-- reference[8] = 0.000478484
+--shuhui-- reference[9] = 0.0015705
+--shuhui-- reference[10] = 0.00838432
+--shuhui-- reference[11] = 0.0280919
+--shuhui-- reference[12] = 0.000793614
+--shuhui-- reference[13] = 0.00291103
+--shuhui-- reference[14] = 0.0140048
+--shuhui-- reference[15] = 0.0406583
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 epsilon_1    1.31927e-04  1.00000e-12    5.00000e-13  9.90000e-01
+     2 epsilon_2    3.95116e-04  1.00000e-12    5.00000e-13  9.90000e-01
+     3 epsilon_3    1.57707e-03  1.00000e-12    5.00000e-13  9.90000e-01
+     4 epsilon_4    6.29505e-03  1.00000e-12    5.00000e-13  9.90000e-01
+     9 epsilon_9    4.78484e-04  1.00000e-12    5.00000e-13  9.90000e-01
+    10 epsilon_10   1.57050e-03  1.00000e-12    5.00000e-13  9.90000e-01
+    11 epsilon_11   8.38432e-03  1.00000e-12    5.00000e-13  9.90000e-01
+    12 epsilon_12   2.80919e-02  1.00000e-12    5.00000e-13  9.90000e-01
+    13 epsilon_13   7.93614e-04  1.00000e-12    5.00000e-13  9.90000e-01
+    14 epsilon_14   2.91103e-03  1.00000e-12    5.00000e-13  9.90000e-01
+    15 epsilon_15   1.40048e-02  1.00000e-12    5.00000e-13  9.90000e-01
+    16 epsilon_16   4.06583e-02  1.00000e-12    5.00000e-13  9.90000e-01
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET ERRDEF           1
+ **********
+ **********
+ **    3 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    4 **MIGRAD       1e+07
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-04
+ FCN=-99720.9 FROM MIGRAD    STATUS=INITIATE       48 CALLS          49 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  epsilon_1    1.31927e-04   1.00000e-12   8.75080e-11   3.03740e+05
+   2  epsilon_2    3.95116e-04   1.00000e-12   5.05720e-11   1.14341e+05
+   3  epsilon_3    1.57707e-03   1.00000e-12   2.53283e-11   5.57923e+03
+   4  epsilon_4    6.29505e-03   1.00000e-12   1.27074e-11   6.00553e+02
+   9  epsilon_9    4.78484e-04   1.00000e-12   4.59576e-11   1.93960e+04
+  10  epsilon_10   1.57050e-03   1.00000e-12   2.53805e-11   2.90298e+04
+  11  epsilon_11   8.38432e-03   1.00000e-12   1.10230e-11   2.20494e+03
+  12  epsilon_12   2.80919e-02   1.00000e-12   6.08336e-12   1.56296e+02
+  13  epsilon_13   7.93614e-04   1.00000e-12   3.56907e-11   6.15149e+03
+  14  epsilon_14   2.91103e-03   1.00000e-12   1.86547e-11   2.56748e+04
+  15  epsilon_15   1.40048e-02   1.00000e-12   8.55327e-12   1.57435e+03
+  16  epsilon_16   4.06583e-02   1.00000e-12   5.09004e-12   6.68469e+01
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-104209 FROM MIGRAD    STATUS=CONVERGED     358 CALLS         359 TOTAL
+                     EDM=1.3333e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  epsilon_1    4.69527e-05   1.70530e-06   3.75755e-05  -7.58356e+00
+   2  epsilon_2    3.97136e-05   5.14562e-06   1.23961e-04   2.84379e-02
+   3  epsilon_3    1.03282e-04   4.52864e-05   7.05520e-04  -3.01836e-01
+   4  epsilon_4    8.14496e-04   4.55582e-04   2.52977e-03   1.35970e-01
+   9  epsilon_9    5.08626e-04   1.12016e-05   7.77007e-05  -9.40945e-01
+  10  epsilon_10   6.56985e-04   3.54720e-05   2.18280e-04   1.31693e-01
+  11  epsilon_11   1.51795e-03   3.46913e-04   1.41125e-03   9.87406e-02
+  12  epsilon_12   9.53424e-03   3.74946e-03   6.11408e-03   3.09512e-02
+  13  epsilon_13   8.60251e-04   1.64616e-05   8.79534e-05   5.10594e+00
+  14  epsilon_14   1.17544e-03   5.96445e-05   2.74148e-04  -4.76727e-01
+  15  epsilon_15   2.59655e-03   6.08709e-04   1.89444e-03   5.37289e-02
+  16  epsilon_16   1.61434e-02   7.76860e-03   9.76738e-03   3.08463e-02
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 12    ERR DEF=1
+ ELEMENTS ABOVE DIAGONAL ARE NOT PRINTED.
+  2.908e-12 
+ -2.480e-12  2.648e-11 
+ -7.497e-13 -6.147e-12  2.051e-09 
+ -1.485e-13 -5.793e-12 -2.953e-10  2.076e-07 
+ -1.730e-12  3.050e-13 -1.701e-12 -3.845e-12  1.255e-10 
+ -9.347e-13  5.843e-13 -7.784e-12 -2.831e-11 -2.785e-11  1.258e-09 
+ -3.193e-13 -2.522e-12 -4.752e-11 -5.711e-10 -1.653e-11 -7.055e-11  1.204e-07 
+  6.969e-14 -2.050e-12 -7.176e-11 -9.146e-10 -3.360e-12 -1.349e-10 -7.484e-09  1.407e-05 
+ -1.351e-12  6.132e-13 -5.331e-13 -1.007e-12 -1.487e-11 -3.166e-11 -1.802e-11 -1.578e-11  2.710e-10 
+  3.008e-13 -2.171e-14 -1.670e-12  4.113e-12 -3.430e-11  4.593e-13 -1.257e-10 -3.542e-10 -8.785e-11  3.557e-09 
+  3.218e-13 -6.976e-13  1.786e-12  1.883e-11 -2.231e-11 -1.004e-10 -2.963e-09 -9.539e-09 -5.333e-11 -2.457e-10  3.705e-07 
+  4.490e-13  3.520e-14  5.712e-12  4.946e-11 -1.547e-11 -1.754e-10 -8.885e-09 -3.245e-08 -2.602e-11 -3.523e-10 -2.077e-08 
+  4.490e-13  3.520e-14  5.712e-12  4.946e-11 -1.547e-11 -1.754e-10 -8.885e-09 -3.245e-08 -2.602e-11 -3.523e-10 -2.077e-08  6.043e-05 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      9     10     11     12     13     14     15     16
+        1  0.30271   1.000 -0.283 -0.010 -0.000 -0.091 -0.015 -0.001  0.000 -0.048  0.003  0.000  0.000
+        2  0.28505  -0.283  1.000 -0.026 -0.002  0.005  0.003 -0.001 -0.000  0.007 -0.000 -0.000  0.000
+        3  0.03596  -0.010 -0.026  1.000 -0.014 -0.003 -0.005 -0.003 -0.000 -0.001 -0.001  0.000  0.000
+        4  0.01526  -0.000 -0.002 -0.014  1.000 -0.001 -0.002 -0.004 -0.001 -0.000  0.000  0.000  0.000
+        9  0.15918  -0.091  0.005 -0.003 -0.001  1.000 -0.070 -0.004 -0.000 -0.081 -0.051 -0.003 -0.000
+       10  0.09676  -0.015  0.003 -0.005 -0.002 -0.070  1.000 -0.006 -0.001 -0.054  0.000 -0.005 -0.001
+       11  0.01972  -0.001 -0.001 -0.003 -0.004 -0.004 -0.006  1.000 -0.006 -0.003 -0.006 -0.014 -0.003
+       12  0.00757   0.000 -0.000 -0.000 -0.001 -0.000 -0.001 -0.006  1.000 -0.000 -0.002 -0.004 -0.001
+       13  0.14946  -0.048  0.007 -0.001 -0.000 -0.081 -0.054 -0.003 -0.000  1.000 -0.089 -0.005 -0.000
+       14  0.10815   0.003 -0.000 -0.001  0.000 -0.051  0.000 -0.006 -0.002 -0.089  1.000 -0.007 -0.001
+       15  0.01911   0.000 -0.000  0.000  0.000 -0.003 -0.005 -0.014 -0.004 -0.005 -0.007  1.000 -0.004
+       16  0.00576   0.000  0.000  0.000  0.000 -0.000 -0.001 -0.003 -0.001 -0.000 -0.001 -0.004  1.000
+
+ Minimum fonction = -104209
+ Estimated vert. distance to min. = 1.3333e-05
+ Number of variable parameters = 12
+ Highest number of parameters defined by user = 16
+ Status of covariance matrix = 3
+
+ pname :epsilon_1, val: 4.69527e-05
+-------Eta : 1, pt : 1
+ pname :epsilon_2, val: 3.97136e-05
+-------Eta : 1, pt : 2
+ pname :epsilon_3, val: 0.000103282
+-------Eta : 1, pt : 3
+ pname :epsilon_4, val: 0.000814496
+-------Eta : 1, pt : 4
+ pname :epsilon_9, val: 0.000508626
+-------Eta : 3, pt : 1
+ pname :epsilon_10, val: 0.000656985
+-------Eta : 3, pt : 2
+ pname :epsilon_11, val: 0.00151795
+-------Eta : 3, pt : 3
+ pname :epsilon_12, val: 0.00953424
+-------Eta : 3, pt : 4
+ pname :epsilon_13, val: 0.000860251
+-------Eta : 4, pt : 1
+ pname :epsilon_14, val: 0.00117544
+-------Eta : 4, pt : 2
+ pname :epsilon_15, val: 0.00259655
+-------Eta : 4, pt : 3
+ pname :epsilon_16, val: 0.0161434
+-------Eta : 4, pt : 4
+-- Rates have been succesfully computed...
